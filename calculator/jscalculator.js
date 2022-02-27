@@ -19,22 +19,26 @@ var operator = readline.question("Please enter the operation you'd like to perfo
         return num1 / num2;
     }
 
-    function calculator(num1, num2, operator){
-        if(operator == "add"){
+    switch(operator) {
+        case "add":
             console.log ("When you add " + num1 + " with " + num2 + 
             " it will equal " + addNumbers(num1, num2) + ".");
-        }
-        else if (operator == "sub"){
+        break;
+        case "sub":
             console.log ("When you subtract " + num1 + " with " + num2 + 
             " it will equal " + subtractNumbers(num1, num2) + ".");
-        }
-        else if (operator == "mul"){
+        break;
+        case "mul":
             console.log ("When you multiply " + num1 + " with " + num2 + 
             " it will equal " + multiplyNumbers(num1, num2) + ".");
-        }
-        else if (operator == "div"){
+        break;
+        case "div":
             console.log ("When you divide " + num1 + " with " + num2 + 
             " it will equal " + divideNumbers(num1, num2) + ".");
-        }
+        break;
+        default:
+            console.log ("Invalid operator selected.")
+
+        
     }
-    calculator(num1, num2, operator)
+    
